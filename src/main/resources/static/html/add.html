@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>添加</title>
+</head>
+<body>
+    <h1>添加学生</h1>
+    <form action="/add" method="post">
+        <table border="1" width="30%" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>姓名:</td>
+                <td><input type="text" name="name" ></td>
+            </tr>
+            <tr>
+                <td>生日:</td>
+                <td><input type="text" name="birth"></td>
+            </tr>
+            <tr>
+                <td>入学日期:</td>
+                <td><input type="text" name="join"></td>
+            </tr>
+            <tr>
+                <td>爱好:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="足球">足球
+                    <input type="checkbox" name="hobby" value="篮球">篮球
+                    <input type="checkbox" name="hobby" value="乒乓球">乒乓球
+                </td>
+            </tr>
+            <tr>
+                <td>性别:</td>
+                <td>
+                    <input type="radio" name="sex" checked value="男">男
+                    <input type="radio" name="sex" value="女">女
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="提交">&nbsp;&nbsp;&nbsp;<input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div align="center">
+        <a href="/selectAll">返回</a>
+    </div>
+</body>
+</html>

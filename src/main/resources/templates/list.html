@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <link  href="/css/style.css" rel="stylesheet" type="text/css" >
+    <script  src="/js/script.js" ></script>
+    <title>学生信息</title>
+</head>
+<body>
+    <h1>学生管理系统</h1>
+    <div align="center"><a href="/html/add.html">添加</a></div>
+    <table border="1" align="center" cellspacing="0" cellpadding="0" width="60%" th:class="bj_color_slategray">
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>入学日期</th>
+            <th>生日</th>
+            <th>性别</th>
+            <th>
+                操作
+            </th>
+        </tr>
+        <tr th:each="stu,iterStar :${list}" th:class="${iterStar.odd}?bj_color_gainsboro:bj_color_silver">
+            <td th:text="${stu.id}">1</td>
+            <td th:text="${stu.name}">刘备</td>
+            <td th:text="${#calendars.format(stu.join,'yyyy/MM/dd HH:mm:ss')}">2000-12-12</td>
+            <td th:text="${stu.birth}">2343-12-12</td>
+            <td th:text="${stu.sex}">男</td>
+            <td>
+                <a th:href="@{/selectById(id=${stu.id})}">修改</a>
+                <a th:href="@{/delete(id=${stu.id})}" onclick="return isDelete()" >删除</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

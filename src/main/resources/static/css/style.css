@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    color: red;
+}
+table{
+    text-align: center;
+}
+.bj_color_gainsboro{
+    background-color: gainsboro;
+}
+.bj_color_silver{
+    background-color: silver;
+}
+.bj_color_slategray{
+    background-color: slategray ;
+}

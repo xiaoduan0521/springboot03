@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转中</title>
+    <script th:inline="javascript">
+        var text = [[${text}]];
+        if (text) {
+            alert(text);
+        }
+        location.href = [[${location}]];
+    </script>
+</head>
+<body>
+</body>
+</html>
