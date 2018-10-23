@@ -121,7 +121,6 @@ public class StudentController {
                 break;
             }
         }
-//        return new ModelAndView("forward:selectAll");//转发
         return new ModelAndView("redirect:selectAll");//重定向
     }
 
