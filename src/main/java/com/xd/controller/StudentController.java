@@ -121,7 +121,7 @@ public class StudentController {
                 break;
             }
         }
+        //sss
         return new ModelAndView("redirect:selectAll");//重定向
     }
-
 }
